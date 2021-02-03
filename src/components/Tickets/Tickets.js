@@ -1,9 +1,11 @@
 import Ticket from './../Ticket/Ticket';
-import { TICKETS } from './../../services/ticket';
+
+import { useTickets } from './../../hooks/useTickets';
 
 function Tickets() {
+    const [tickets] = useTickets();
 
-    const listTicket = TICKETS.map(ticket=> <Ticket ticket={ticket} key={ticket.id}/>)
+    const listTicket = tickets.map(ticket=> <Ticket ticket={ticket} key={ticket.id}/>)
  
     return (
         <div>
