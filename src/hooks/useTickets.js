@@ -10,7 +10,7 @@ export function useTickets() {
         setTickets(res);
     };
     
-     useEffect(()=>{
+    useEffect(()=>{
         getdata();
     },[]);
 
