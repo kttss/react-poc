@@ -1,18 +1,18 @@
-import  { useState,useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
 import { getTodos } from '../services/todo';
 
 export function useTodos() {
-    const [Todos, setTodos] = useState([]);
+  const [Todos, setTodos] = useState([]);
 
-    const loadData = async ()=>{ 
-        const res = await getTodos();
-        setTodos(res);
-    }
+  const loadData = async () => {
+    const res = await getTodos();
+    setTodos(res);
+  };
 
-    useEffect(() => {
-       loadData();
-    },[])
+  useEffect(() => {
+    loadData();
+  }, []);
 
-    return [Todos,setTodos];
+  return [Todos, setTodos];
 }

@@ -1,7 +1,7 @@
-import {TICKETS}   from './../data/ticket';
+import { TICKETS } from './../data/ticket';
 
 export function getTickets(params) {
-    return new Promise((resolve)=>{
-        resolve(TICKETS)
-    });
-}  
+  return new Promise((resolve) => {
+    resolve(TICKETS);
+  });
+}

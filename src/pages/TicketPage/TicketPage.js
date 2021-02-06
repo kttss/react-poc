@@ -1,9 +1,7 @@
-import Tickets from "../../components/Tickets/Tickets";
+import Tickets from '../../components/Tickets/Tickets';
 
-function TicketPage(){
-    return (
-        <Tickets />
-    );
+function TicketPage() {
+  return <Tickets />;
 }
 
 export default TicketPage;
