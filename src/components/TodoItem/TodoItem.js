@@ -28,7 +28,9 @@ function TodoItem({ task, remove, update }) {
       <div>
         {id}-{title}
         <Button handleClick={openEdit}>edit</Button>
-        <Button handleClick={onRemove}>delete</Button>
+        <Button color="secondary" handleClick={onRemove}>
+          delete
+        </Button>
       </div>
     );
   }
