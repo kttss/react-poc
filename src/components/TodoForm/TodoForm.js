@@ -31,9 +31,11 @@ function TodoForm(props) {
   };
 
   return (
-    <div>
-      <input type="text" ref={input} />
-      <Button handleClick={handleClick}>{task ? 'edit' : 'add'}</Button>
+    <div className="input-group mb-3">
+      <input type="text" className="form-control" aria-describedby="button-addon2" ref={input} />
+      <Button handleClick={handleClick} type="outline-primary">
+        {task ? 'edit' : 'add'}
+      </Button>
       {errors.map((error) => (
         <div>{error}</div>
       ))}

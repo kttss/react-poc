@@ -20,7 +20,7 @@ function App() {
         <Toolbar />
         <Container>
           <Menu />
-          <main>
+          <main className="container-fluid mt-2">
             <Switch>
               <Route path="/" exact component={HomePage} />
               <Route path="/tickets" exact component={TicketPage} />

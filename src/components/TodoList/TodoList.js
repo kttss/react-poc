@@ -18,13 +18,15 @@ function TodoList() {
   };
 
   const list = Todos.map((task, i) => (
-    <TodoItem task={task} remove={(e) => handleRemove(e, i)} update={(t) => handleUpdate(t, i)} key={task.id} />
+    <li className="list-group-item" key={task.id}>
+      <TodoItem task={task} remove={(e) => handleRemove(e, i)} update={(t) => handleUpdate(t, i)} key={task.id} />
+    </li>
   ));
 
   return (
     <div>
       <TodoForm insertTask={handleInsert} />
-      {list}
+      <ul className="list-group list-group-flush">{list}</ul>
     </div>
   );
 }

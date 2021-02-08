@@ -1,14 +1,12 @@
-import { default as Btn } from '@material-ui/core/Button';
-
 function Button(props) {
   const onClick = () => {
     props.handleClick();
   };
-  const { color } = props;
+  const type = props.type ? props.type : 'primary';
   return (
-    <Btn onClick={onClick} color={color ? color : 'primary'} size="small">
+    <button onClick={onClick} className={'btn btn-' + type}>
       {props.children}
-    </Btn>
+    </button>
   );
 }
 
